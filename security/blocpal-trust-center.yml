@@ -1,0 +1,13 @@
+generated: '2026-09-29'
+method: searched
+probe: true
+source: https://www.blocpal.com/security
+url: https://www.blocpal.com/security
+certifications:
+- SOC 2
+- PCI DSS
+evidence:
+- source: https://www.blocpal.com/security
+  keywords:
+  - soc 2
+  - pci dss

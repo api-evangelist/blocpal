@@ -1,0 +1,64 @@
+generated: '2026-09-29'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 4
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - sandbox
+  - website
+hosts:
+- host: api.blocpal.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: blocpal.com
+  role: api
+  relation: own
+- host: sandbox.blocpal.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: blocpal.com
+  role: sandbox
+  relation: own
+- host: www.blocpal.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Compliance
+  - TermsOfService
+  - PrivacyPolicy
+  - Newsroom
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: blocpal.com
+  role: website
+  relation: own
+- host: x.blocpal.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: blocpal.com
+  role: other
+  relation: own

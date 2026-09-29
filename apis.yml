@@ -1,23 +1,72 @@
 aid: blocpal
+
 name: BlocPal
-description: 'BlocPal is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/683dc9f61e8ea0aa11eb3643/68768e5d8b712d567a97e1a7_og_logo.png
+
+description: 'BlocPal is a Canadian fintech building a next‑generation digital wealth and neo‑banking platform. It offers digital banking, digital wealth, tokenization, and API integration services, empowering individuals and businesses worldwide to access financial services easily and securely. Leveraging AI, cloud computing, and blockchain, BlocPal delivers both traditional (TradFi) and decentralized (DeFi) financial solutions through collaborative networks.'
+
 url: https://raw.githubusercontent.com/api-evangelist/blocpal/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
 tags:
 - Company
-apis: []
+- Fintech
+- Digital Banking
+- Wealth Management
+- Blockchain
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Compliance
+  url: https://www.blocpal.com/security
+- type: Hosts
+  url: hosts/blocpal-hosts.yml
+- type: Vendors
+  url: vendors/blocpal-vendors.yml
+- type: TermsOfService
+  url: https://www.blocpal.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.blocpal.com/privacy-policy-old
+- type: Newsroom
+  url: https://www.blocpal.com/news
+- type: TrustCenter
+  url: security/blocpal-trust-center.yml
+- type: DomainSecurity
+  url: security/blocpal-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.blocpal.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: OpenAPI spec not found at standard endpoints (openapi.json, openapi.yaml) on api.blocpal.com.
+  evidence:
+    - url: https://api.blocpal.com/openapi.json
+      status: 404
+  checked: '2026-09-29'
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
